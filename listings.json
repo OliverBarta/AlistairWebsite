@@ -23,6 +23,12 @@
             ]
     },
     {
+        "name": "Example",
+        "brand": "Yohji Yamamoto",
+        "price": "370",
+        "image": [""]
+    },
+    {
         "name": "Rick Owens \"Anthem\" Waterfall Cardigan",
         "brand": "Rick Owens",
         "price": "279",
