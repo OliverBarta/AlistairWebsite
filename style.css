@@ -96,14 +96,14 @@ html, body {
 }
 
 .listing:hover {
-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .listing-img {
-width: 50%;
-height: auto;
-margin-top: 20%;
-margin-left: 25%;
+    width: 50%;
+    height: auto;
+    margin-top: 20%;
+    margin-left: 25%;
 }
 
 .listing-info {
