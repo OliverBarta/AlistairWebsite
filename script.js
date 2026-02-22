@@ -25,17 +25,24 @@ async function loadListings(search) {
         listingDiv.classList.add("listing");
         const listingData = data[i];
 
+        const image = document.createElement("img");
+        image.src = listingData.image[0];
+        image.classList.add("listing-img");
+
         const listingInfo = document.createElement("div");
         listingInfo.classList.add("listing-info");
 
-        const nameDiv = document.createElement("p");
+        const nameDiv = document.createElement("h2");
         nameDiv.innerHTML = listingData.name;
+
         const brandDiv = document.createElement("p");
         brandDiv.innerHTML = listingData.brand;
+        brandDiv.classList.add("brand");
         const priceDiv = document.createElement("p");
         priceDiv.innerHTML = "$"+listingData.price;
         priceDiv.classList.add("price");
 
+        listingInfo.append(image);
         listingInfo.append(nameDiv);
         listingInfo.append(brandDiv);
         listingInfo.append(priceDiv);
