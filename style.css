@@ -93,30 +93,30 @@ html, body {
     text-align: left;
     padding: 0;
     transition: transform 0.2s ease;
-  }
+}
 
-  .listing:hover {
-    transform: scale(1.03);
-  }
+.listing:hover {
+transform: scale(1.03);
+}
 
-  .listing-img {
-    width: 30%;
-    height: auto;
-  }
+.listing-img {
+width: 30%;
+height: auto;
+}
 
-  .listing-info {
-    padding: 15px;
-  }
+.listing-info {
+padding: 15px;
+}
 
-  .brand {
-    color: gray;
-    margin: 5px 0;
-  }
+.brand {
+color: gray;
+margin: 5px 0;
+}
 
-  .price {
-    font-weight: bold;
-    color: #4CAF50;
-  }
+.price {
+font-weight: bold;
+color: #4CAF50;
+}
 
 .listing p {
     margin-right: auto;
