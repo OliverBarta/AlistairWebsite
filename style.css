@@ -105,11 +105,11 @@ html, body {
 
 .goon {
     position: absolute;
-    top: 80%;
+    top: 60%;
     left: 80%;
     width: 20px;
     height: 20px;
-    background-color: transparent;
+    background-color: red;
     border-radius: 10px;
     border:black solid 1px;
 }
