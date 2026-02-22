@@ -10,12 +10,14 @@ html, body {
 
 .top-bar {
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
-    flex-direction: row;
     height: 60px;
     background-color: white;
     border-bottom:black solid 1px;
+    align-items: center;
 }
 
 .search-bar {
@@ -58,7 +60,7 @@ html, body {
     min-height: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 4%;
+    padding-top: 60px;
     background: orange;
 }
 
@@ -75,4 +77,9 @@ html, body {
     flex-direction: column;
     background-color: rgb(228, 228, 228);
     width: 15%;
+}
+
+.nothingTitle {
+    position: absolute;
+    left: 50%;
 }

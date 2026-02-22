@@ -18,8 +18,6 @@ async function readfile(fileName) {
 
 async function loadListings(search) {
     console.log("Loading listings");
-    
-    
 
 }
 
