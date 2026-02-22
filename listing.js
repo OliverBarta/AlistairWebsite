@@ -74,9 +74,12 @@ async function loadTextArea(listing) {
     priceDiv.classList.add("priceDiv");
     priceDiv.innerHTML = listing.price+"$";
 
+    const addToCart = document.createElement("button");
+    addToCart.classList.add("addToCart");
+    addToCart.innerHTML = "Add to cart";
 
     textArea.appendChild(nameDiv);
     textArea.appendChild(brandDiv);
     textArea.appendChild(priceDiv);
-
+    textArea.appendChild(addToCart);
 }
