@@ -144,7 +144,10 @@ margin: 0 auto;
 
 .nothingTitle {
     position: absolute;
-    left: 45%;
+    font-size: 30px;
+    font-family: Karla;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 30px;
     font-family: Karla;
 }

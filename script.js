@@ -105,7 +105,6 @@ async function loadFilters() {
     console.log("Loading filters");
 
     const filterArea = document.getElementById("filterArea");
-    const searchDiv = document.getElementById("search");
 
     let usedBrands = [];
 
