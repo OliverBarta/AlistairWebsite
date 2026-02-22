@@ -22,13 +22,20 @@ async function loadListings(search) {
 
     for (let i = 0; i < data.length; i++) {
         const listingDiv = document.createElement("button");
+        listingDiv.classList.add("listing");
         const listingData = data[i];
 
         const nameDiv = document.createElement("p");
         nameDiv.innerHTML = listingData.name;
+        const brandDiv = document.createElement("p");
+        brandDiv.innerHTML = listingData.brand;
+        const priceDiv = document.createElement("p");
+        priceDiv.innerHTML = listingData.price;
+        priceDiv.classList.add("listingPrice");
 
         listingDiv.append(nameDiv);
-
+        listingDiv.append(brandDiv);
+        listingDiv.append(priceDiv);
         listingArea.appendChild(listingDiv);
     }
     
