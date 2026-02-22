@@ -68,7 +68,7 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
     width: 85%;
 }
 
@@ -82,4 +82,5 @@ html, body {
 .nothingTitle {
     position: absolute;
     left: 50%;
+    font-size: 20px;
 }
