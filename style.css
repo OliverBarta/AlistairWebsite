@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Karla;
+    src: url(Karla-VariableFont_wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +14,7 @@ html, body {
   height: 100%;
 }
 
-@font-face {
-    font-family: Karla;
-    src: url(Karla-VariableFont_wght.ttf);
-}
+
 
 .top-bar {
     position: fixed;
@@ -81,8 +83,8 @@ html, body {
 }
 
 .listing {
-    width: 15%;
-    height: 35%;
+    width: 255px;
+    height: 300px;
     margin: 2%;
     background: white;
     border: none;
@@ -131,6 +133,15 @@ html, body {
     width: 15%;
 }
 
+.filter {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-right: auto;
+}
+
 .nothingTitle {
     position: absolute;
     left: 45%;
@@ -152,4 +163,10 @@ html, body {
 .goon:hover {
     background-color: rgb(255, 0, 0);
     scale: 120%;
+}
+
+.noResults {
+    font-family: Karla;
+    margin: 2%;
+    font-size: 18px;
 }
