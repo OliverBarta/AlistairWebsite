@@ -14,12 +14,19 @@
     <audio id="myAudio">
         <source src="goon.mp3" type="audio/mpeg">
     </audio>
+    <audio id="myAudios">
+        <source src="horn.mp3" type="audio/mpeg">
+    </audio>
 
-    <button onclick="playAudio()">Play Audio</button>
+    
 
     <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        playAudio();
+    });
     function playAudio() {
         document.getElementById("myAudio").play();
+       
     }
     </script>
 </body>
