@@ -2,7 +2,7 @@
     {
         "name": "Undercover AW10 \"Avakareta Life\" Jeans",
         "brand": "Undercover",
-        "price": "360",
+        "price": "385",
         "image": [
             "https://media-assets.grailed.com/prd/listing/temp/1c1efc4ecc3c48fba7afa2c0f87554d8?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/f2b4ba750d2d4804988d03c58314294c?w=1000",
@@ -14,7 +14,7 @@
     {
         "name": "Yohji Yamamoto Y's Asymmetrical Pants",
         "brand": "Yohji Yamamoto",
-        "price": "370",
+        "price": "450",
         "image": [
             "https://media-assets.grailed.com/prd/listing/temp/ae1c6c04ab804b1c9e3b87678154efb2?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/d8468d77b5ed4e859e3eb3193f702275?w=1000",
@@ -22,16 +22,11 @@
             "https://media-assets.grailed.com/prd/listing/temp/29eb34cf70f24e9193dfd47128359e06?w=1000"
             ]
     },
-    {
-        "name": "Example",
-        "brand": "Yohji Yamamoto",
-        "price": "370",
-        "image": [""]
-    },
+    
     {
         "name": "Rick Owens \"Anthem\" Waterfall Cardigan",
         "brand": "Rick Owens",
-        "price": "279",
+        "price": "430",
         "image": [
             "https://media-assets.grailed.com/prd/listing/temp/8f506e42a85a4bbf973a148c9420f25f?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/9b059850a1dd431a8c58c3e4381c8996?w=1000",
@@ -40,6 +35,27 @@
             "https://media-assets.grailed.com/prd/listing/temp/41dc3cfe72d7461d8c5967cf16e65536?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/72d58e0e41d44ef39d0bece97b06d54b?w=1000"
             ]
+    },
+    {
+      "name": "Kapital Studded Bootcut Jeans",
+        "brand": "Kapital",
+        "price": "455",
+        "image": [
+            "https://media-assets.grailed.com/prd/listing/temp/e0127ae77179478288f8c26e775f70c0?w=1000",
+            "https://media-assets.grailed.com/prd/listing/temp/b5cdbad95ebd40aba2455bd4b9655e78?w=1000",
+            "https://media-assets.grailed.com/prd/listing/temp/314de69b94b84b9198c2a1dc5a708616?w=1000",
+            "https://media-assets.grailed.com/prd/listing/temp/ddf692924b8642d288242ebf22f4918a?w=1000"
+            ]  
+    },
+    {
+        "name": "Ecco2K \"PXE\" Tank Top",
+        "brand": "Drain Gang",
+        "price": "180",
+        "image": [
+            "https://media-assets.grailed.com/prd/listing/temp/2f41e4c0f5f241308a11c76a644194a3?w=1000",
+            "https://media-assets.grailed.com/prd/listing/temp/05eac90fd5984c04ab62bac40887f112?w=1000",
+            "https://media-assets.grailed.com/prd/listing/temp/6ac0031390734a2da90edc83900a9c25?w=1000",
+            "https://media-assets.grailed.com/prd/listing/temp/fdd7e604235747be8eab26c9755d6a9c?w=1000"
     }
 
 ]
