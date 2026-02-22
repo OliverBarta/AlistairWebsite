@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Karla;
 }
 
 html, body {
@@ -80,42 +81,23 @@ html, body {
 }
 
 .listing {
+    display: flex;
+    flex-direction: column;
     width: 15%;
     height: 35%;
-    margin: 2%;
-    background: white;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    cursor: pointer;
-    text-align: left;
-    padding: 0;
-    transition: transform 0.2s ease;
-  }
+    margin: 1%;
+    background-color: transparent;
+    border-radius: 10px;
+    border: black solid 1px;
+}
 
-  .listing:hover {
-    transform: scale(1.03);
-  }
+.listing p {
+    margin-right: auto;
+}
 
-  .listing-img {
-    width: 30%;
-    height: auto;
-  }
-
-  .listing-info {
-    padding: 15px;
-  }
-
-  .brand {
-    color: gray;
-    margin: 5px 0;
-  }
-
-  .price {
-    font-weight: bold;
-    color: #4CAF50;
-  }
+.listingPrice {
+    font-size: 30px;
+}
 
 .filterArea {
     display: flex;
@@ -126,8 +108,9 @@ html, body {
 
 .nothingTitle {
     position: absolute;
-    left: 50%;
-    font-size: 20px;
+    left: 45%;
+    font-size: 30px;
+    font-family: Karla;
 }
 
 .goon {
