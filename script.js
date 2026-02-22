@@ -1,6 +1,13 @@
+const data = readfile("listings.json");
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Site loaded");
     loadListings("");
+    
+    const filterArea = document.getElementById("filterArea");
+
+    
+
 });
 
 async function readfile(fileName) {
@@ -10,9 +17,12 @@ async function readfile(fileName) {
 }
 
 async function loadListings(search) {
-    const data = await readfile("listings.json");
+    console.log("Loading listings");
     
     
 
+}
 
+async function cartButton() {
+    console.log("Cart button pressed");
 }

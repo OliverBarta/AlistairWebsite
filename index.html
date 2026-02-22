@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!-- Add the "id=""" so that i can access the div from the backend -->
 
 <body>
     <div class="top-bar">
         <div class="search-bar">
             <input type="text" placeholder="Search...">
         </div>
-        <button type="button" class="cart-button"><img src="images\5-shopping-cart.png"></button>
+        <button type="button" id="cart" class="cart" onclick="cartButton()"><img src="images\5-shopping-cart.png"></button>
     </div>
-
-    <div class="box">
-        <h1>Heading 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    <div id="mainBody" class="mainBody">
+        <div id="filterArea" class="filterArea">ddd</div>
+        <div id="listingArea" class="listingArea">eee</div>
     </div>
     <script src="script.js"></script>
 </body>

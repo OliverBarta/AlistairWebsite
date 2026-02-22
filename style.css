@@ -1,16 +1,25 @@
-.box {
-    width: 300px;
-    height: 200px;
-    background-color: lightblue;
-    padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 .top-bar {
-    height: 50px;
-    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 60px;
+    background-color: white;
     border-bottom:black solid 1px;
-    text-align: center;
-    align-items: center;
+}
+
+.search-bar {
+    padding-left: 2%;
 }
 
 .search-bar input {
@@ -20,9 +29,7 @@
     height: 100%;
     border: none;
     font-size: 200%;
-    placeholder {
-        color: rgb(0, 0, 0);
-    }
+    
 }
 
 .search-bar input:focus {
@@ -30,6 +37,42 @@
     border: none;
 }
 
+.cart {
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: 2%;
+    transition: scale 0.3s;
+}
+
+.cart img {
+  width: 48px;
+  height: auto;
+}
+
+.cart:hover {
+    scale: 120%;
+}
+
+.mainBody {
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 4%;
+    background: orange;
+}
+
 .listingArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: green;
+    width: 85%;
+}
+
+.filterArea {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 228, 228);
+    width: 15%;
 }
