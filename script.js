@@ -25,18 +25,21 @@ async function loadListings(search) {
         listingDiv.classList.add("listing");
         const listingData = data[i];
 
+        const listingInfo = document.createElement("div");
+        listingInfo.classList.add("listing-info");
+
         const nameDiv = document.createElement("p");
         nameDiv.innerHTML = listingData.name;
         const brandDiv = document.createElement("p");
         brandDiv.innerHTML = listingData.brand;
         const priceDiv = document.createElement("p");
-        priceDiv.innerHTML = listingData.price;
-        priceDiv.classList.add("listingPrice");
+        priceDiv.innerHTML = "$"+listingData.price;
+        priceDiv.classList.add("price");
 
-        listingDiv.append(nameDiv);
-        listingDiv.append(brandDiv);
-        listingDiv.append(priceDiv);
-
+        listingInfo.append(nameDiv);
+        listingInfo.append(brandDiv);
+        listingInfo.append(priceDiv);
+        listingDiv.append(listingInfo);
         listingDiv.onclick = () => {
             console.log(listingData.name);
         };
