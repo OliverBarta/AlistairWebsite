@@ -95,10 +95,6 @@ html, body {
     margin-right: auto;
 }
 
-.listingPrice {
-    font-size: 30px;
-}
-
 .filterArea {
     display: flex;
     flex-direction: column;
