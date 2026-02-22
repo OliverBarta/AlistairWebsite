@@ -51,7 +51,6 @@ async function loadListings(search) {
             console.log(listingData.name);
         };
 
-
         listingArea.appendChild(listingDiv);
     }
     
@@ -59,8 +58,5 @@ async function loadListings(search) {
 
 }
 
-async function cartButton() {
-    console.log("Cart button pressed");
-}
 
 
