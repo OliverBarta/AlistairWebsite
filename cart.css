@@ -1,16 +1,17 @@
+@font-face {
+    font-family: Karla;
+    src: url(Karla-VariableFont_wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Karla;
 }
 
 html, body {
   height: 100%;
-}
-
-@font-face {
-    font-family: Karla;
-    src: url(Karla-VariableFont_wght.ttf);
 }
 
 .top-bar {
