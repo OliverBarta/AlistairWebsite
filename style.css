@@ -149,22 +149,6 @@ margin: 0 auto;
     font-family: Karla;
 }
 
-.goon {
-    position: absolute;
-    top: 60%;
-    left: 80%;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 10px;
-    border:black solid 1px;
-}
-
-.goon:hover {
-    background-color: rgb(255, 0, 0);
-    scale: 120%;
-}
-
 .noResults {
     font-family: Karla;
     margin: 2%;
