@@ -36,6 +36,12 @@ async function loadListings(search) {
         listingDiv.append(nameDiv);
         listingDiv.append(brandDiv);
         listingDiv.append(priceDiv);
+
+        listingDiv.onclick = () => {
+            console.log(listingData.name);
+        };
+
+
         listingArea.appendChild(listingDiv);
     }
     
