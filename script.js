@@ -84,6 +84,7 @@ async function loadListings(search, filter) {
         listingDiv.append(listingInfo);
         listingDiv.onclick = () => {
             console.log(listingData.name);
+            
         };
 
         listingArea.appendChild(listingDiv);
