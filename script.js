@@ -24,3 +24,5 @@ async function loadListings(search) {
 async function cartButton() {
     console.log("Cart button pressed");
 }
+
+

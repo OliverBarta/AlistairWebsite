@@ -70,6 +70,19 @@ html, body {
     flex-wrap: wrap;
     background-color: rgb(255, 255, 255);
     width: 85%;
+    justify-content: flex-start;
+
+}
+
+.listing {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    height: 35%;
+    margin: 1%;
+    background-color: transparent;
+    border-radius: 10px;
+    border: black solid 1px;
 }
 
 .filterArea {
@@ -83,4 +96,15 @@ html, body {
     position: absolute;
     left: 50%;
     font-size: 20px;
+}
+
+.goon {
+    position: absolute;
+    top: 3%;
+    left: 80%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    border:none;
 }
