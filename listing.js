@@ -34,6 +34,9 @@ async function loadSideImages(listing) {
         img.classList.add("imageSmall");
         img.src = listing.image[i];
 
+        buttonImg.onclick = () => {
+            loadSelectedImage(listing, i);
+        }
         buttonImg.appendChild(img);
 
         imageColDiv.appendChild(buttonImg);
@@ -42,6 +45,11 @@ async function loadSideImages(listing) {
 
 async function loadSelectedImage(listing, num) {
     const imageSelectedBody = document.getElementById("imageSelectedBody");
+
+    while (imageSelectedBody.firstChild) {
+        imageSelectedBody.removeChild(imageSelectedBody.firstChild);
+    }
+
     const imageSelectedDiv = document.createElement("img");
     imageSelectedDiv.classList.add("imageSelected");
     imageSelectedDiv.src = listing.image[num];
