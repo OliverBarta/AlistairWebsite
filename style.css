@@ -29,3 +29,7 @@
     outline: none;
     border: none;
 }
+
+.listingArea {
+    background-color: green;
+}
