@@ -54,5 +54,34 @@ html, body {
 .imageCol {
     display: flex;
     flex-direction: column;
+}
+
+.imageButton {
+    background: none;
+    border: none;
+    
+    transition: scale 0.3s;
+}
+
+.imageButton:hover {
+    scale: 120%;
+}
+
+.imageSmall {
+    height: 150px;
+    width: auto;
+}
+
+.imageSelectedBody {
+    height: 600px;
+    width: 600px;
     background: green;
+    justify-content: center;
+}
+
+
+.imageSelected {
+    
+    height: 500px;
+    width: auto;
 }

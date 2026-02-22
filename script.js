@@ -83,8 +83,7 @@ async function loadListings(search, filter) {
         listingInfo.append(priceDiv);
         listingDiv.append(listingInfo);
         listingDiv.onclick = () => {
-            console.log(listingData.name);
-            location.href='listing.html';
+            location.href = `listing.html?id=${listingData.id}`;
         };
 
         listingArea.appendChild(listingDiv);
