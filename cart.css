@@ -48,5 +48,36 @@ html, body {
     display: flex;
     flex-direction: row;
     padding-top: 60px;
-    background: orange;
+    background: rgb(255, 255, 255);
+}
+
+.listing {
+  margin-top: 40%;
+  width: 70%;
+  height: 200px;
+  margin: 2%;
+  border-bottom: black solid 1px;
+  overflow: hidden;
+  text-align: left;
+  padding: 0;
+}
+
+.listing-img {
+  width: auto;
+  height: 150px;
+  object-fit: contain;
+}
+
+.listing-info {
+  padding: 10px;
+}
+
+.brand {
+  color: gray;
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #4CAF50;
 }
