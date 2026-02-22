@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     loadSideImages(listing);
     loadSelectedImage(listing, 0);
+    loadTextArea(listing);
 });
 
 //reads json file
@@ -55,4 +56,27 @@ async function loadSelectedImage(listing, num) {
     imageSelectedDiv.src = listing.image[num];
 
     imageSelectedBody.appendChild(imageSelectedDiv);
+}
+
+async function loadTextArea(listing) {
+
+    const textArea = document.getElementById("textArea");
+
+    const nameDiv = document.createElement("div");
+    nameDiv.classList.add("nameDiv");
+    nameDiv.innerHTML = listing.name;
+
+    const brandDiv = document.createElement("div");
+    brandDiv.classList.add("brandDiv");
+    brandDiv.innerHTML = listing.brand;
+
+    const priceDiv = document.createElement("div");
+    priceDiv.classList.add("priceDiv");
+    priceDiv.innerHTML = listing.price+"$";
+
+
+    textArea.appendChild(nameDiv);
+    textArea.appendChild(brandDiv);
+    textArea.appendChild(priceDiv);
+
 }
