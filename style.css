@@ -100,8 +100,10 @@ transform: scale(1.03);
 }
 
 .listing-img {
-width: 30%;
+width: 50%;
 height: auto;
+margin-top: 20%;
+margin-left: 25%;
 }
 
 .listing-info {
