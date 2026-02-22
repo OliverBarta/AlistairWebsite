@@ -84,7 +84,7 @@ async function loadListings(search, filter) {
         listingDiv.append(listingInfo);
         listingDiv.onclick = () => {
             console.log(listingData.name);
-            location.href='cart.html';
+            location.href='listing.html';
         };
 
         listingArea.appendChild(listingDiv);
