@@ -70,12 +70,14 @@ async function loadSelectedImage(listing, num) {
         imageSelectedDiv.style.maxWidth = '300px';
         imageSelectedBody.style.width = '300px';
         imageSelectedBody.style.height = '300px';
+        alert("300px");
     }
     if (window.innerWidth < 500) {
         imageSelectedDiv.style.height = '200px';
         imageSelectedDiv.style.maxWidth = '200px';
         imageSelectedBody.style.width = '200px';
         imageSelectedBody.style.height = '200px';
+        alert("200px");
     }
 
     imageSelectedBody.appendChild(imageSelectedDiv);
