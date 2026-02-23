@@ -2,12 +2,20 @@
 var filterSelected = "";
 var searchVal = "";
 
+async function windowResize() {
+    if (window.innerWidth < 750) {
+        loadFilters(false);
+    } else {
+        loadFilters(true);
+    }
+}
+
 //runs on start
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Site loaded");
 
     loadListings(searchVal, filterSelected);
-    loadFilters();
+    windowResize();
 });
 
 //runs every time you type in search bar (more specifically when your key goes up)
@@ -100,11 +108,19 @@ async function loadListings(search, filter) {
 }
 
 
-async function loadFilters() {
+async function loadFilters(loadF) {
     const data = await readfile("listings.json");
     console.log("Loading filters");
 
     const filterArea = document.getElementById("filterArea");
+
+    while (filterArea.firstChild) {
+        filterArea.removeChild(filterArea.firstChild);
+    }
+
+    if (!loadF) {
+        filterArea.style.display = 'none';
+    }
 
     let usedBrands = [];
 

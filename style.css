@@ -69,7 +69,6 @@ html, body {
     margin-top: 0;
     display: flex;
     flex-direction: row;
-    background: orange;
 }
 
 .listingArea {
@@ -77,9 +76,7 @@ html, body {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: white;
-    width: 85%;
     justify-content: flex-start;
-
 }
 
 .listing {
