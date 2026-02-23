@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         return;
     }
 
+    if (window.innerWidth < 500) {
+        const mainBody = document.getElementById("mainBody");
+        mainBody.style.width = '100%';
+    }
+
     loadSideImages(listing);
     loadSelectedImage(listing, 0);
     loadTextArea(listing);
@@ -26,6 +31,7 @@ async function readfile(fileName) {
 
 async function loadSideImages(listing) {
 
+    
     const imageColDiv = document.getElementById("imageCol");
 
     for (let i = 0; i < listing.image.length; i++) {
@@ -34,6 +40,11 @@ async function loadSideImages(listing) {
         const img = document.createElement("img");
         img.classList.add("imageSmall");
         img.src = listing.image[i];
+        if (window.innerWidth < 750) {
+            img.style.width = '50px';
+            img.style.height = '50px';
+            imageColDiv.style.marginRight = 'auto';
+        }
 
         buttonImg.onclick = () => {
             loadSelectedImage(listing, i);
@@ -54,6 +65,12 @@ async function loadSelectedImage(listing, num) {
     const imageSelectedDiv = document.createElement("img");
     imageSelectedDiv.classList.add("imageSelected");
     imageSelectedDiv.src = listing.image[num];
+    if (window.innerWidth < 750) {
+        imageSelectedDiv.style.height = '300px';
+        imageSelectedDiv.style.maxWidth = '400px';
+        imageSelectedBody.style.width = '350px';
+        imageSelectedBody.style.height = '350px';
+    }
 
     imageSelectedBody.appendChild(imageSelectedDiv);
 }
