@@ -67,9 +67,15 @@ async function loadSelectedImage(listing, num) {
     imageSelectedDiv.src = listing.image[num];
     if (window.innerWidth < 750) {
         imageSelectedDiv.style.height = '300px';
-        imageSelectedDiv.style.maxWidth = '400px';
-        imageSelectedBody.style.width = '350px';
-        imageSelectedBody.style.height = '350px';
+        imageSelectedDiv.style.maxWidth = '300px';
+        imageSelectedBody.style.width = '300px';
+        imageSelectedBody.style.height = '300px';
+    }
+    if (window.innerWidth < 500) {
+        imageSelectedDiv.style.height = '200px';
+        imageSelectedDiv.style.maxWidth = '200px';
+        imageSelectedBody.style.width = '200px';
+        imageSelectedBody.style.height = '200px';
     }
 
     imageSelectedBody.appendChild(imageSelectedDiv);
