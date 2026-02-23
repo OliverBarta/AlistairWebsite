@@ -85,7 +85,8 @@ html, body {
 .listing {
     width: 255px;
     height: 300px;
-    margin: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
     background: white;
     border: none;
     border-radius: 12px;
