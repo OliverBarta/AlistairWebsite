@@ -66,9 +66,9 @@ html, body {
 
 .mainBody {
     min-height: 100%;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
-    padding-top: 60px;
     background: orange;
 }
 
@@ -156,4 +156,10 @@ margin: 0 auto;
     font-family: Karla;
     margin: 2%;
     font-size: 18px;
+}
+
+.bannerImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
