@@ -100,9 +100,40 @@ async function loadTextArea(listing) {
     const addToCart = document.createElement("button");
     addToCart.classList.add("addToCart");
     addToCart.innerHTML = "Add to cart";
+    addToCart.onclick = () => {
+        addItemToCart(listing);
+    }
 
     textArea.appendChild(nameDiv);
     textArea.appendChild(brandDiv);
     textArea.appendChild(priceDiv);
     textArea.appendChild(addToCart);
 }
+
+function addItemToCart(listing) {
+
+    // get existing cart
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // check if item already exists
+    const existing = cart.find(item => item.id === listing.id);
+
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({
+            id: listing.id,
+            name: listing.name,
+            price: listing.price,
+            image: listing.image,
+            brand: listing.brand,
+            quantity: 1
+        });
+    }
+
+    // save cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    console.log("Item added:", listing.name);
+}
+

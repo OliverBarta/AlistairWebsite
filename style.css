@@ -14,8 +14,6 @@ html, body {
   height: 100%;
 }
 
-
-
 .top-bar {
     position: fixed;
     top: 0;
@@ -39,7 +37,6 @@ html, body {
     height: 100%;
     border: none;
     font-size: 200%;
-    
 }
 
 .search-bar input:focus {
@@ -53,6 +50,8 @@ html, body {
     margin-left: auto;
     margin-right: 2%;
     transition: scale 0.3s;
+    font-size: 30px;
+    color: rgb(45, 45, 45);
 }
 
 .cart img {
@@ -76,7 +75,6 @@ html, body {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: white;
-    justify-content: flex-start;
 }
 
 .listing {
