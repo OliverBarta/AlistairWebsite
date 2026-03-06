@@ -84,6 +84,7 @@ html, body {
 .name {
   font-size: 20px;
   border: none;
+  border-bottom: black solid 2px;
   background: none;
   transition: scale 0.3s;
 }

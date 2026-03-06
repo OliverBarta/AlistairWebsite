@@ -14,6 +14,8 @@ async function windowResize() {
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Site loaded");
 
+    refreshCartNumber();
+
     loadListings(searchVal, filterSelected);
     windowResize();
 });
@@ -23,6 +25,7 @@ document.getElementById("search").addEventListener("keyup", function(event) {
     const searchDiv = document.getElementById("search");
 
     loadListings(searchDiv.value, filterSelected);
+
 });
 
 //reads json file
@@ -147,4 +150,21 @@ async function loadFilters(loadF) {
         loadListings(searchVal, "");
     };
     filterArea.appendChild(filterDiv);
+}
+
+
+async function refreshCartNumber() {
+    const cartDiv = document.getElementById("cart");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    var numItemsInCart = 0;
+
+    cart.forEach(item => {
+        numItemsInCart += item.quantity;
+
+    });
+
+    cartDiv.innerHTML = numItemsInCart;
+
 }

@@ -47,6 +47,8 @@ html, body {
     margin-left: auto;
     margin-right: 2%;
     transition: scale 0.3s;
+    font-size: 30px;
+    color: rgb(45, 45, 45);
 }
 
 .cart img {

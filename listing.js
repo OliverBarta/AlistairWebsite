@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const mainBody = document.getElementById("mainBody");
         mainBody.style.width = '100%';
     }
-
+    refreshCartNumber();
     loadSideImages(listing);
     loadSelectedImage(listing, 0);
     loadTextArea(listing);
@@ -135,5 +135,22 @@ function addItemToCart(listing) {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     console.log("Item added:", listing.name);
+
+    refreshCartNumber();
 }
 
+async function refreshCartNumber() {
+    const cartDiv = document.getElementById("cart");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    var numItemsInCart = 0;
+
+    cart.forEach(item => {
+        numItemsInCart += item.quantity;
+
+    });
+
+    cartDiv.innerHTML = numItemsInCart;
+
+}
