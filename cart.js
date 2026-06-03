@@ -1,3 +1,6 @@
+
+
+// runs on start
 document.addEventListener("DOMContentLoaded", async function () {
 
     console.log("cart loading");
@@ -12,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     
     loadCart(cart);
-    
 });
 
 async function loadCart(cart) {
@@ -21,7 +23,14 @@ async function loadCart(cart) {
 
     cart.forEach(item => {
         const listingDiv = document.createElement("listing");
-        listingDiv.classList.add("listing");
+
+        // adds small style for thin displays and large style for wide displays (phones vs desktop)
+        if (window.innerWidth < 750) {
+            listingDiv.classList.add("listingSlim");
+        } else {
+            listingDiv.classList.add("listingWide");
+        }
+        
 
         const imgDiv = document.createElement("img");
         imgDiv.classList.add("listing-img");
@@ -47,11 +56,16 @@ async function loadCart(cart) {
 
         const priceDiv = document.createElement("price");
         priceDiv.innerHTML = item.price+"$ x "+item.quantity;
-        priceDiv.classList.add("price");
+        if (window.innerWidth < 750) {
+            priceDiv.classList.add("priceSlim");
+        } else {
+            priceDiv.classList.add("priceWide");
+        }
+        
 
         const removeItemButton = document.createElement("button");
         removeItemButton.classList.add("removeItemButton");
-        removeItemButton.innerHTML = "Remove   ";
+        removeItemButton.innerHTML = "Remove";
 
         removeItemButton.onclick = () => {
 

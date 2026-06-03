@@ -30,8 +30,6 @@ async function readfile(fileName) {
 }
 
 async function loadSideImages(listing) {
-
-    
     const imageColDiv = document.getElementById("imageCol");
 
     for (let i = 0; i < listing.image.length; i++) {
@@ -148,7 +146,6 @@ async function refreshCartNumber() {
 
     cart.forEach(item => {
         numItemsInCart += item.quantity;
-
     });
 
     cartDiv.innerHTML = numItemsInCart;

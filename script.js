@@ -58,6 +58,13 @@ async function loadListings(search, filter) {
         
         const listingDiv = document.createElement("button");
         listingDiv.classList.add("listing");
+        
+        if (window.innerWidth < 750) {
+            listingDiv.classList.add("listingSlim");
+        } else {
+            listingDiv.classList.remove("listingSlim");
+        }
+
         const listingData = data[i];
 
         //skips the listings not in the brand filter
@@ -123,6 +130,8 @@ async function loadFilters(loadF) {
 
     if (!loadF) {
         filterArea.style.display = 'none';
+    } else {
+        filterArea.style.display = 'flex';
     }
 
     let usedBrands = [];
