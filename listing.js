@@ -12,10 +12,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         return;
     }
 
-    if (window.innerWidth < 500) {
-        const mainBody = document.getElementById("mainBody");
-        mainBody.style.width = '100%';
-    }
     refreshCartNumber();
     loadSideImages(listing);
     loadSelectedImage(listing, 0);
@@ -35,18 +31,16 @@ async function loadSideImages(listing) {
     for (let i = 0; i < listing.image.length; i++) {
         const buttonImg = document.createElement("button");
         buttonImg.classList.add("imageButton");
+        
         const img = document.createElement("img");
         img.classList.add("imageSmall");
+
         img.src = listing.image[i];
-        if (window.innerWidth < 750) {
-            img.style.width = '50px';
-            img.style.height = '50px';
-            imageColDiv.style.marginRight = 'auto';
-        }
 
         buttonImg.onclick = () => {
             loadSelectedImage(listing, i);
         }
+
         buttonImg.appendChild(img);
 
         imageColDiv.appendChild(buttonImg);
@@ -55,7 +49,6 @@ async function loadSideImages(listing) {
 
 async function loadSelectedImage(listing, num) {
     const imageSelectedBody = document.getElementById("imageSelectedBody");
-
     while (imageSelectedBody.firstChild) {
         imageSelectedBody.removeChild(imageSelectedBody.firstChild);
     }
@@ -63,18 +56,6 @@ async function loadSelectedImage(listing, num) {
     const imageSelectedDiv = document.createElement("img");
     imageSelectedDiv.classList.add("imageSelected");
     imageSelectedDiv.src = listing.image[num];
-    if (window.innerWidth < 750) {
-        imageSelectedDiv.style.height = '300px';
-        imageSelectedDiv.style.maxWidth = '300px';
-        imageSelectedBody.style.width = '300px';
-        imageSelectedBody.style.height = '300px';
-    }
-    if (window.innerWidth < 500) {
-        imageSelectedDiv.style.height = '200px';
-        imageSelectedDiv.style.maxWidth = '200px';
-        imageSelectedBody.style.width = '200px';
-        imageSelectedBody.style.height = '200px';
-    }
 
     imageSelectedBody.appendChild(imageSelectedDiv);
 }

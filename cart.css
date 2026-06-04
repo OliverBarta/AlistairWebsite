@@ -56,26 +56,12 @@ html, body {
   font-size: 20px;
 }
 
-.listingWide {
+.listing {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 200px;
-  margin: 2%;
-  
-  overflow: hidden;
-  text-align: left;
-  padding: 0;
-  border-bottom: grey solid 1px;
-}
-
-.listingSlim {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 280px;
   margin: 2%;
   
   overflow: hidden;
@@ -105,7 +91,6 @@ html, body {
 
 .name:hover{
   scale: 110%;
-  
 }
 
 .brand {
@@ -113,15 +98,33 @@ html, body {
   margin: 5px 0;
 }
 
-.priceWide {
-  position: absolute;
+.price {
+  position: relative;
+  margin-left: auto;
   color: #4CAF50;
   font-size: 30px;
 }
 
-.priceSlim {
-  color: #4CAF50;
-  font-size: 30px;
+@media (max-width: 900px) {
+  .price {
+    position: relative;
+    margin-left: 0;
+    color: #4CAF50;
+    font-size: 30px;
+  }
+  .listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    margin: 2%;
+    
+    overflow: hidden;
+    text-align: left;
+    padding: 0;
+    border-bottom: grey solid 1px;
+  }
 }
 
 .removeItemButton {

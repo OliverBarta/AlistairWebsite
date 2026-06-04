@@ -2,13 +2,6 @@
 var filterSelected = "";
 var searchVal = "";
 
-async function windowResize() {
-    if (window.innerWidth < 750) {
-        loadFilters(false);
-    } else {
-        loadFilters(true);
-    }
-}
 
 //runs on start
 document.addEventListener("DOMContentLoaded", function () {
@@ -17,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     refreshCartNumber();
 
     loadListings(searchVal, filterSelected);
-    windowResize();
+    loadFilters();
 });
 
 //runs every time you type in search bar (more specifically when your key goes up)
@@ -58,12 +51,6 @@ async function loadListings(search, filter) {
         
         const listingDiv = document.createElement("button");
         listingDiv.classList.add("listing");
-        
-        if (window.innerWidth < 750) {
-            listingDiv.classList.add("listingSlim");
-        } else {
-            listingDiv.classList.remove("listingSlim");
-        }
 
         const listingData = data[i];
 
@@ -112,13 +99,12 @@ async function loadListings(search, filter) {
         Div.innerHTML = "No Listings for current filter and search.";
         Div.classList.add("noResults");
 
-
         listingArea.appendChild(Div);
     }
 }
 
 
-async function loadFilters(loadF) {
+async function loadFilters() {
     const data = await readfile("listings.json");
     console.log("Loading filters");
 
@@ -126,12 +112,6 @@ async function loadFilters(loadF) {
 
     while (filterArea.firstChild) {
         filterArea.removeChild(filterArea.firstChild);
-    }
-
-    if (!loadF) {
-        filterArea.style.display = 'none';
-    } else {
-        filterArea.style.display = 'flex';
     }
 
     let usedBrands = [];
@@ -160,7 +140,6 @@ async function loadFilters(loadF) {
     };
     filterArea.appendChild(filterDiv);
 }
-
 
 async function refreshCartNumber() {
     const cartDiv = document.getElementById("cart");

@@ -15,13 +15,14 @@ html, body {
 }
 
 .top-bar {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     width: 100%;
     height: 60px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     border-bottom:black solid 1px;
     align-items: center;
 }
@@ -67,9 +68,21 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 60px;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .mainBody {
+        width: 100;
+    }
+}
+
+.allImages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 60px;
 }
 
 .imageCol {
@@ -80,7 +93,6 @@ html, body {
 .imageButton {
     background: none;
     border: none;
-    
     transition: scale 0.3s;
 }
 
@@ -89,8 +101,8 @@ html, body {
 }
 
 .imageSmall {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     object-fit: cover;
 }
 
@@ -108,6 +120,36 @@ html, body {
     max-width: 600px;
     width: auto;
     object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .imageSelected {
+        height: 500px;
+        max-width: 500px;
+    }
+    .imageSelectedBody {
+        height: 500px;
+        width: 500px;
+    }
+    .imageSmall {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .imageSelected {
+        height: 400px;
+        max-width: 400px;
+    }
+    .imageSelectedBody {
+        height: 400px;
+        width: 400px;
+    }
+    .imageSmall {
+        height: 50px;
+        width: 50px;
+    }
 }
 
 .textArea {
