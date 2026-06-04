@@ -123,6 +123,57 @@ html, body {
     object-fit: cover;
 }
 
+.textArea {
+    margin-left: 5%;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.addToCart {
+    background-color: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border: grey solid 1px;
+    transition: scale 0.3s;
+}
+
+.addToCartNoneLeft {
+    background-color: grey;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border: grey solid 1px;
+    transition: scale 0.3s;
+}
+
+.addToCart:hover {
+    scale: 120%;
+}
+.addToCart:active {
+    background: grey;
+}
+
+
+.nameDiv {
+    color: black;
+    font-size: 30px;
+    border-bottom: black solid 2px;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    .nameDiv {
+        font-size: 25px;
+    }
+}
+
 @media (max-width: 700px) {
     .imageSelected {
         height: 500px;
@@ -135,6 +186,12 @@ html, body {
     .imageSmall {
         height: 70px;
         width: 70px;
+    }
+    .textArea {
+        margin-left: 0%;
+    }
+    .nameDiv {
+        font-size: 25px;
     }
 }
 
@@ -151,6 +208,12 @@ html, body {
         height: 50px;
         width: 50px;
     }
+    .textArea {
+        margin-left: 0%;
+    }
+    .nameDiv {
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -166,7 +229,14 @@ html, body {
         height: 50px;
         width: 50px;
     }
+    .textArea {
+        margin-left: 0%;
+    }
+    .nameDiv {
+        font-size: 20px;
+    }
 }
+
 
 @media (max-width: 400px) {
     .imageSelected {
@@ -181,23 +251,14 @@ html, body {
         height: 50px;
         width: 50px;
     }
+    .textArea {
+        margin-left: 0%;
+    }
+    .nameDiv {
+        font-size: 20px;
+    }
 }
 
-.textArea {
-    margin-left: 5%;
-    max-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nameDiv {
-    color: black;
-    font-size: 30px;
-    border-bottom: black solid 2px;
-    margin-bottom: 10px;
-    margin-right: auto;
-}
 
 .brandDiv {
     color: grey;
@@ -206,26 +267,27 @@ html, body {
     margin-bottom: 20px;
 }
 
+.stockDiv {
+    font-size: 15px;
+    margin-left: auto;
+    color: grey;
+}
+
+.cartCount {
+    font-size: 15px;
+    color: grey;
+}
+
+.stockBrandArea {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
 .priceDiv {
     color: green;
     font-size: 40px;
     margin-bottom: 20px;
     margin-right: auto;
-}
-
-.addToCart {
-    background-color: none;
-    border-radius: 20px;
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    border: grey solid 1px;
-    transition: scale 0.3s;
-}
-
-.addToCart:hover {
-    scale: 120%;
-}
-.addToCart:active {
-    background: grey;
 }

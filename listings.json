@@ -10,7 +10,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/a0f689adc6d24d6599bf110dc4cc4da8?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/b13dca255c7544cc99cf875329324b4e?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/e5c71d95641b4531ac6f3a2078fbd8ba?w=1000"
-            ]
+            ],
+        "stock": "1"
     },
     {
         "id": "2",
@@ -22,7 +23,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/d8468d77b5ed4e859e3eb3193f702275?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/04fee0c9166340749983eab913843d09?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/29eb34cf70f24e9193dfd47128359e06?w=1000"
-            ]
+            ],
+        "stock": "1"
     },
     {
         "id": "3",
@@ -36,7 +38,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/509655ac3a5b404cbed9b1dfaadcd823?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/41dc3cfe72d7461d8c5967cf16e65536?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/72d58e0e41d44ef39d0bece97b06d54b?w=1000"
-            ]
+            ],
+        "stock": "1"
     },
     {
         "id": "4",
@@ -48,7 +51,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/b5cdbad95ebd40aba2455bd4b9655e78?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/314de69b94b84b9198c2a1dc5a708616?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/ddf692924b8642d288242ebf22f4918a?w=1000"
-            ]  
+            ]  ,
+        "stock": "1"
     },
     {
         "id": "5",
@@ -60,7 +64,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/05eac90fd5984c04ab62bac40887f112?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/6ac0031390734a2da90edc83900a9c25?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/fdd7e604235747be8eab26c9755d6a9c?w=1000"
-        ]
+        ],
+        "stock": "1"
     },
     {
         "id": "6",
@@ -75,7 +80,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/0d2a7655a529481faedfa7d552eddc0a?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/2894e7448e8742dfa26e9eabec0acc72?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/d25a107429434859af7bbb9c859f59ca?w=1000"
-        ]
+        ],
+        "stock": "1"
     },
     {
         "id": "7",
@@ -88,7 +94,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/6d6820bb5731409cb04af8407e8ec202?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/ed4f291897b948a1ba93415c2c9342e0?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/bbc91e404fb247389cc4d863228e8e4d?w=1000"
-        ]
+        ],
+        "stock": "1"
     },
     {
         "id": "8",
@@ -112,7 +119,8 @@
             "https://media-assets.grailed.com/prd/listing/temp/ca20fa594683458ca565c8f20cf6b3d1?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/343cdf76fb644bfba95ff3fa2d699ba6?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/8ffcba8c65f44e6f8fef9ee1721bcffd?w=1000"
-        ]
+        ],
+        "stock": "1"
     },
     {
         "id": "10",
@@ -123,6 +131,7 @@
             "https://media-assets.grailed.com/prd/listing/temp/d90186d439594b20b463cd81c4f957f4?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/93a61a6df89e4a64b7b451263b816434?w=1000",
             "https://media-assets.grailed.com/prd/listing/temp/56b9406ab64d4b15aaceb4b70cbe7124?w=1000"
-        ]
+        ],
+        "stock": "1"
     }
 ]

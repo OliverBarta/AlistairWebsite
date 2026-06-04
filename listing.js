@@ -1,4 +1,5 @@
 
+
 //runs on start
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("Listing loaded");
@@ -64,6 +65,10 @@ async function loadTextArea(listing) {
 
     const textArea = document.getElementById("textArea");
 
+    while (textArea.firstChild) {
+        textArea.removeChild(textArea.firstChild);
+    }
+
     const nameDiv = document.createElement("div");
     nameDiv.classList.add("nameDiv");
     nameDiv.innerHTML = listing.name;
@@ -76,15 +81,59 @@ async function loadTextArea(listing) {
     priceDiv.classList.add("priceDiv");
     priceDiv.innerHTML = listing.price+"$";
 
-    const addToCart = document.createElement("button");
-    addToCart.classList.add("addToCart");
-    addToCart.innerHTML = "Add to cart";
-    addToCart.onclick = () => {
-        addItemToCart(listing);
+    // get existing cart
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItem = cart.find(item => item.id === listing.id);
+    
+    let moreToAddToCart = false;
+    let stockConsideringCart = listing.stock;
+
+    if (cartItem) {
+        console.log(cartItem);
+        if (listing.stock - cartItem.quantity > 0) {
+            moreToAddToCart = true;
+        }
+        stockConsideringCart -= cartItem.quantity;
+    } else {
+        if (listing.stock > 0) {
+            moreToAddToCart = true;
+        }
     }
 
+    const stockDiv = document.createElement("div");
+    stockDiv.classList.add("stockDiv");
+    stockDiv.innerHTML = listing.stock+" in stock";
+
+    const cartCountDiv = document.createElement("div");
+    cartCountDiv.classList.add("cartCount");
+    if (cartItem) {
+        cartCountDiv.innerHTML = cartItem.quantity+" in cart";
+    } else {
+        cartCountDiv.innerHTML = "None in cart";
+    }
+    const addToCart = document.createElement("button");
+    
+    addToCart.innerHTML = "Add to cart";
+
+    if (moreToAddToCart) {
+        addToCart.classList.add("addToCart");
+        addToCart.onclick = () => {
+            addItemToCart(listing);
+        }
+    } else {
+        addToCart.classList.add("addToCartNoneLeft");
+        addToCart.onclick = () => {}
+        addToCart.innerHTML = "None left"
+    }
+
+    const stockBrandArea = document.createElement("div");
+    stockBrandArea.classList.add("stockBrandArea");
+
     textArea.appendChild(nameDiv);
-    textArea.appendChild(brandDiv);
+    stockBrandArea.appendChild(brandDiv);
+    stockBrandArea.appendChild(cartCountDiv);
+    stockBrandArea.appendChild(stockDiv);
+    textArea.appendChild(stockBrandArea);
     textArea.appendChild(priceDiv);
     textArea.appendChild(addToCart);
 }
@@ -115,6 +164,7 @@ function addItemToCart(listing) {
 
     console.log("Item added:", listing.name);
 
+    loadTextArea(listing);
     refreshCartNumber();
 }
 
