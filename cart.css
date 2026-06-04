@@ -99,14 +99,17 @@ html, body {
 }
 
 .price {
-  position: relative;
-  margin-left: auto;
+  position: absolute;
+  margin-left: 550px;
   color: #4CAF50;
   font-size: 30px;
 }
 
+
+
 @media (max-width: 900px) {
   .price {
+    width: auto;
     position: relative;
     margin-left: 0;
     color: #4CAF50;
