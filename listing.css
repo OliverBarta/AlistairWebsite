@@ -152,6 +152,21 @@ html, body {
     }
 }
 
+@media (max-width: 500px) {
+    .imageSelected {
+        height: 350px;
+        max-width: 350px;
+    }
+    .imageSelectedBody {
+        height: 350px;
+        width: 350px;
+    }
+    .imageSmall {
+        height: 50px;
+        width: 50px;
+    }
+}
+
 .textArea {
     margin-left: 5%;
     max-height: 600px;
