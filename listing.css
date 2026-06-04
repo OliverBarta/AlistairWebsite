@@ -117,8 +117,9 @@ html, body {
 
 .imageSelected {
     height: 600px;
-    max-width: 600px;
     width: auto;
+    max-width: 600px;
+
     object-fit: cover;
 }
 
@@ -160,6 +161,21 @@ html, body {
     .imageSelectedBody {
         height: 350px;
         width: 350px;
+    }
+    .imageSmall {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .imageSelected {
+        height: 300px;
+        max-width: 300px;
+    }
+    .imageSelectedBody {
+        height: 300px;
+        width: 300px;
     }
     .imageSmall {
         height: 50px;
