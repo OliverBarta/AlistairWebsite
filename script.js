@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loadListings(searchVal, filterSelected);
     loadFilters();
-    alert("Screen width: " + window.innerWidth);
 });
 
 //runs every time you type in search bar (more specifically when your key goes up)
