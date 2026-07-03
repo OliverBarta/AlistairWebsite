@@ -147,3 +147,22 @@ html, body {
 .removeItemButton:active {
   color: grey;
 }
+
+.total {
+  position: absolute;
+
+  font-size: 30px;
+}
+
+.cartSummary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  
+  overflow: hidden;
+  text-align: left;
+  padding: 0;
+  border-bottom: grey solid 1px;
+}

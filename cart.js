@@ -21,6 +21,8 @@ async function loadCart(cart) {
 
     const mainBodyDiv = document.getElementById("mainBody");
 
+    let totalPrice = 0;
+
     cart.forEach(item => {
         const listingDiv = document.createElement("listing");
         listingDiv.classList.add("listing");
@@ -50,6 +52,9 @@ async function loadCart(cart) {
 
         const priceDiv = document.createElement("price");
         priceDiv.innerHTML = item.price+"$ x "+item.quantity;
+
+        totalPrice += item.price;
+
         priceDiv.classList.add("price");
 
         const removeItemButton = document.createElement("button");
@@ -82,6 +87,12 @@ async function loadCart(cart) {
 
 
     });
+
+    const totalPriceDiv = document.getElementById("total");
+
+    totalPriceDiv.innerHTML = "Total: "+totalPrice+"$";
+
+
 
 }
 
