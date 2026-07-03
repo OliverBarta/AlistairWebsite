@@ -2,6 +2,7 @@
 var filterSelected = "";
 var searchVal = "";
 
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 //runs on start
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,11 +23,16 @@ document.getElementById("search").addEventListener("keyup", function(event) {
 
 });
 
-//reads json file
-async function readfile(fileName) {
-    const response = await fetch(fileName);
-    const data = await response.json();
-    return data;
+async function readfile() {
+
+    // loads everything from database
+    const { data: listings, error } = await supabaseClient
+        .from('listings')
+        .select('*');
+
+    if (error) console.log("Error reading listings from Supabase:", error);
+
+    return listings;
 }
 
 //loads listings filtered for search and filter (filter could be brand, etc)
@@ -34,7 +40,7 @@ async function loadListings(search, filter) {
 
     filterSelected = filter;
     searchVal = search;
-    const dataPreSearchFilter = await readfile("listings.json");
+    const dataPreSearchFilter = await readfile();
         //aplies search filter
     const data = dataPreSearchFilter.filter(f => f.name?.toLowerCase().startsWith(searchVal));
 
@@ -106,7 +112,7 @@ async function loadListings(search, filter) {
 
 
 async function loadFilters() {
-    const data = await readfile("listings.json");
+    const data = await readfile();
     console.log("Loading filters");
 
     const filterArea = document.getElementById("filterArea");

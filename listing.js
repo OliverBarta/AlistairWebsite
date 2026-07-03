@@ -1,14 +1,19 @@
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
-//runs on start
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("Listing loaded");
     const params = new URLSearchParams(window.location.search);
-    listingId = params.get("id");
-    const data = await readfile("listings.json");
-    const listing = data.find(item => item.id === listingId);
+    listingId = parseInt(params.get("id"));
 
-    if (!listing) {
+    // loads everything from database for the specific listing
+    const { data: listing, error } = await supabaseClient
+        .from('listings')
+        .select('*')
+        .eq('id', listingId)
+        .single();
+
+    if (error || !listing) {
         console.error("Listing not found for id:", listingId);
         return;
     }
@@ -18,13 +23,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     loadSelectedImage(listing, 0);
     loadTextArea(listing);
 });
-
-//reads json file
-async function readfile(fileName) {
-    const response = await fetch(fileName);
-    const data = await response.json();
-    return data;
-}
 
 async function loadSideImages(listing) {
     const imageColDiv = document.getElementById("imageCol");
