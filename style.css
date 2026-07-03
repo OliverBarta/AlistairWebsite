@@ -143,6 +143,7 @@ html, body {
 .filterArea {
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
     background-color: rgb(228, 228, 228);
 }
 
@@ -183,4 +184,13 @@ html, body {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.extraArea {
+    cursor: pointer;
+    background-color: white;
+    text-decoration: underline;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
 }

@@ -1,0 +1,14 @@
+h2 {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+input, textarea {
+    padding: 10px;
+}
+
+button {
+    padding: 5px;
+    margin: 0px 5px;
+}
