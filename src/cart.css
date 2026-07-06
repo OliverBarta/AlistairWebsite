@@ -1,124 +1,162 @@
-/* 
-
-.mainBody {
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-}
-
-.noItem {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translateX(-50%);
-  font-size: 20px;
-}
-
-.listing {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  margin: 2%;
-  
-  overflow: hidden;
-  text-align: left;
-  padding: 0;
-  border-bottom: grey solid 1px;
-}
-
-.listing-img {
-  width: 200px;
-  height: 150px;
-  object-fit: contain;
-}
-
-.centerItems {
+.mainBodyCart {
   display: flex;
   flex-direction: column;
+  padding-top: 64px;
+  background: var(--paper);
+  min-height: 100vh;
 }
 
-.name {
-  font-size: 20px;
-  border: none;
-  border-bottom: black solid 2px;
-  background: none;
-  transition: scale 0.3s;
+/* --- total: always its own full-width row --- */
+.cartTotalRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 2px solid var(--line);
+  background: var(--accent);
 }
 
-.name:hover{
-  scale: 110%;
-}
-
-.brand {
-  color: gray;
-  margin: 5px 0;
-}
-
-.price {
-  position: absolute;
-  margin-left: 550px;
-  color: #4CAF50;
-  font-size: 30px;
-}
-
-
-
-@media (max-width: 900px) {
-  .price {
-    width: auto;
-    position: relative;
-    margin-left: 0;
-    color: #4CAF50;
-    font-size: 30px;
-  }
-  .listing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 280px;
-    margin: 2%;
-    
-    overflow: hidden;
-    text-align: left;
-    padding: 0;
-    border-bottom: grey solid 1px;
-  }
-}
-
-.removeItemButton {
-  z-index: 99;
-  background: none;
-  border: none;
-  margin-left: auto;
-  padding-right: 1%;
-  font-size: 20px;
-  transition: scale 0.3s;
-}
-
-.removeItemButton:hover {
-  scale: 120%;
-}
-
-.removeItemButton:active {
-  color: grey;
+.totalLabel {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-variation-settings: "wght" 700;
+  color: var(--accent-ink);
 }
 
 .total {
-  font-size: 30px;
+  font-size: 32px;
+  font-variation-settings: "wght" 800;
+  color: var(--accent-ink);
 }
 
-.cartSummary {
+.noItem {
+  text-align: center;
+  font-size: 18px;
+  color: var(--ink-soft);
+  padding: 60px 20px;
+}
+
+/* --- item list: each item is its own row --- */
+.cartList {
   display: flex;
   flex-direction: column;
+}
+
+.listingCart {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 120px;
-  
-  overflow: hidden;
+  gap: 20px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--card-bg);
+  transition: background 0.2s ease;
+}
+
+.listingCart:hover {
+  background: var(--paper);
+}
+
+.listingCart-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: var(--paper);
+  border-radius: 8px;
+}
+
+.cartItemDetails {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.nameCart {
+  font-size: 18px;
+  font-variation-settings: "wght" 700;
+  color: var(--ink);
+  border: none;
+  background: none;
   text-align: left;
   padding: 0;
-  border-bottom: grey solid 1px;
-} */
+  width: fit-content;
+  transition: opacity 0.2s ease;
+}
+
+.nameCart:hover {
+  opacity: 0.6;
+}
+
+.brandCart {
+  color: var(--ink-soft);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.priceCart {
+  font-size: 18px;
+  font-variation-settings: "wght" 700;
+  color: var(--ink);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.removeItemButton {
+  flex-shrink: 0;
+  background: transparent;
+  border: 2px solid var(--line);
+  color: var(--ink);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 14px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.removeItemButton:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.removeItemButton:active {
+  transform: scale(0.96);
+}
+
+/* --- small screens: stack each row's contents vertically --- */
+@media (max-width: 600px) {
+  .listingCart {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+      gap: 12px;
+  }
+
+  .listingCart-img {
+      width: 100%;
+      height: 180px;
+      align-self: center;
+      max-width: 220px;
+  }
+
+  .cartItemDetails {
+      align-items: center;
+  }
+
+  .priceCart {
+      text-align: center;
+  }
+
+  .removeItemButton {
+      width: 100%;
+  }
+
+  .cartTotalRow {
+      gap: 4px;
+      text-align: center;
+  }
+}

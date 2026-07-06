@@ -84,6 +84,12 @@ function Home() {
             <div id="mainBody" className="mainBody">
                 <div id="filterArea" className="filterArea">
                     <div className="filterAreaTitle">FILTER BY BRAND</div>
+                    <button
+                        className={`filter ${brandFilter === '' ? 'active' : ''}`}
+                        onClick={() => setBrandFilter('')}
+                    >
+                        Clear Filters
+                    </button>    
                     {uniqueBrands.map((brand) => (
                         <button
                             key={brand}
@@ -92,13 +98,7 @@ function Home() {
                         >
                             {brand}
                         </button>
-                    ))} 
-                    <button
-                        className={`filter ${brandFilter === '' ? 'active' : ''}`}
-                        onClick={() => setBrandFilter('')}
-                    >
-                        Clear Filters
-                    </button>                
+                    ))}             
                 </div>
                 <div id="listingArea" className="listingArea">
                     {filteredListings.length === 0 ? (
@@ -119,7 +119,7 @@ function Home() {
                     )}
                 </div>
             </div>
-            <div className="extraArea" onClick={() => navigate(`/NOTHINGG/Admin`)}>Admin Login</div>
+            <div className="extraArea" onClick={() => navigate(`/Admin`)}>Admin Login</div>
         </>
     )
 }
