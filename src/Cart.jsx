@@ -94,18 +94,20 @@ function Cart() {
                 ) : (
                     <div className="cartList">
                         {cartItems.map(item => {
-                            if (!verifyItem(item.id)) {
+                            if (verifyItem(item.id)) {
                                 return (
                                     <div key={item.id} className="listingCart">
+                                        Item bugged
                                         <button
                                             className="removeItemButton"
+                                            style={{ marginLeft: 'auto'}}
                                             onClick={() => removeOneFromCart(item.id)}
                                             aria-label={`Remove one ${item.name} from cart`}
                                         >
                                             Remove
                                         </button>
                                     
-                                    Item bugged</div>
+                                    </div>
                                 );
                             } else {
 
