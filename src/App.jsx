@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 
 import Home from './Home.jsx';
 import Cart from './Cart.jsx';
@@ -14,10 +13,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/NOTHINGG/" element={<Home />} />
-          <Route path="/NOTHINGG/Cart" element={<Cart />} />
-          <Route path="/NOTHINGG/Admin" element={<Admin />} />
-          <Route path="/NOTHINGG/Listing/:listingId" element={<Listing />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Admin" element={<Admin />} />
+          <Route path="/Listing/:listingId" element={<Listing />} />
         </Routes>
       </Router>
     </>
