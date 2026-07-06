@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename='/NOTHINGG'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Cart" element={<Cart />} />
