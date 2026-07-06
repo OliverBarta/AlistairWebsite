@@ -1,2 +1,0 @@
-const SUPABASE_URL = "https://tjrpgqlnmqcyzxuusyki.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqcnBncWxubXFjeXp4dXVzeWtpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwODc3NTEsImV4cCI6MjA5ODY2Mzc1MX0.7BaAzZ-epqNgYiNliK64hgsqG38rE2AuV9WDkQBY5N4";

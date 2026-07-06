@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react'
+import { useState } from 'react';
 
-import Home from './Home'
+import Home from './Home.jsx';
+import Cart from './Cart.jsx';
+import Admin from './Admin.jsx';
+import Listing from './Listing.jsx';
 
 import './App.css'
 
@@ -12,6 +15,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/NOTHINGG/" element={<Home />} />
+          <Route path="/NOTHINGG/Cart" element={<Cart />} />
+          <Route path="/NOTHINGG/Admin" element={<Admin />} />
+          <Route path="/NOTHINGG/Listing/:listingId" element={<Listing />} />
         </Routes>
       </Router>
     </>
