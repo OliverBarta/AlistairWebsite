@@ -78,7 +78,7 @@ async function loadListingsList() {
     }
 
     const listEl = document.getElementById("listingsList");
-    listEl.innerHTML = ""; // clear existing
+    listEl.innerHTML = "";
 
     listings.forEach(listing => {
         const row = document.createElement("div");

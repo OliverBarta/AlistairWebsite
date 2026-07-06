@@ -26,7 +26,6 @@ async function loadCart(cart) {
     cart.forEach(item => {
         const listingDiv = document.createElement("listing");
         listingDiv.classList.add("listing");
-        // adds small style for thin displays and large style for wide displays (phones vs desktop)
 
         const imgDiv = document.createElement("img");
         imgDiv.classList.add("listing-img");
