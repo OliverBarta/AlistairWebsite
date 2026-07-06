@@ -60,7 +60,7 @@ function Home() {
                     ></input>
                 </div>
                 <div className="nothingTitle" id="nothingTitle">NOTHINGG</div>
-                <button type="button" id="cart" className="cart" onClick={() => navigate(`/NOTHINGG/Cart`)}>Cart</button>
+                <button type="button" id="cart" className="cart" onClick={() => navigate(`/Cart`)}>Cart</button>
             </div>
 
             <div className="ticker">
@@ -105,7 +105,7 @@ function Home() {
                         <div className="noResults">No listings match your search.</div>
                     ) : (
                         filteredListings.map((listing) => (
-                            <button key={listing.id} className="listing" onClick={() => navigate(`/NOTHINGG/Listing/${listing.id}`)}>
+                            <button key={listing.id} className="listing" onClick={() => navigate(`/Listing/${listing.id}`)}>
                                 <div className="listing-img-wrap">
                                     <img className="listing-img" src={listing.image ? listing.image[0] : defaultImage} alt={listing.name} />
                                 </div>

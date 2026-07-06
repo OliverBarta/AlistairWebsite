@@ -9,7 +9,7 @@ function Cart() {
     return (
         <>
             <div className="top-bar">
-                <div type="button" className="nothingTitle" id="nothingTitle" onClick={() => navigate(`/NOTHINGG/`)}>NOTHINGG</div>
+                <div type="button" className="nothingTitle" id="nothingTitle" onClick={() => navigate(`/`)}>NOTHINGG</div>
             </div>
             <div className="mainBody" id="mainBody">
                 <div id="cartSummary" className="cartSummary">

@@ -47,8 +47,8 @@ function Listing() {
         return (
             <>
                 <div className="top-bar">
-                    <div type="button" className="nothingTitle" id="nothingTitle" onClick={() => navigate(`/NOTHING/`)}>NOTHINGG</div>
-                    <button type="button" className="cart" id="cart" onClick={() => navigate(`/NOTHING/Cart`)}>Cart</button>
+                    <div type="button" className="nothingTitle" id="nothingTitle" onClick={() => navigate(`/`)}>NOTHINGG</div>
+                    <button type="button" className="cart" id="cart" onClick={() => navigate(`/Cart`)}>Cart</button>
                 </div>
                 <div className="mainBodyListing" id="mainBodyListing">
                     <div id='allImagesArea' className='allImages'>
