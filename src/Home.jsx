@@ -19,6 +19,8 @@ function Home() {
 
     const [searchVal, setSearchVal] = useState('');
 
+    const [showFilters, setShowFilters] = useState(false);
+
     useEffect(() => {
         const getListings = async () => {
             try {
@@ -38,12 +40,19 @@ function Home() {
 
     }, []);
 
-    if (!AllListings) return <div>Loading...</div>;
+    
 
     useEffect(() => {
         const brands = [...new Set(AllListings.map(listing => listing.brand))];
         setUniqueBrands(brands);
     }, [AllListings]);
+
+    if (!AllListings) return <div>Loading...</div>;
+
+    const selectBrand = (brand) => {
+        setBrandFilter(brand);
+        setShowFilters(false); // closes the mobile dropdown after picking; no-op on desktop
+    };
 
     const filteredListings = AllListings.filter(listing =>
         listing.name.toLowerCase().includes(searchVal.toLowerCase()) &&
@@ -82,23 +91,33 @@ function Home() {
 
 
             <div id="mainBody" className="mainBody">
-                <div id="filterArea" className="filterArea">
+
+                <button
+                    className="filterToggle"
+                    onClick={() => setShowFilters(prev => !prev)}
+                    aria-expanded={showFilters}
+                >
+                    Filter{brandFilter ? ` · ${brandFilter}` : ''}
+                    <span className={`filterToggleIcon ${showFilters ? 'open' : ''}`}>▾</span>
+                </button>
+
+                <div id="filterArea" className={`filterArea ${showFilters ? 'open' : ''}`}>
                     <div className="filterAreaTitle">FILTER BY BRAND</div>
                     <button
                         className={`filter ${brandFilter === '' ? 'active' : ''}`}
-                        onClick={() => setBrandFilter('')}
+                        onClick={() => selectBrand('')}
                     >
                         Clear Filters
-                    </button>    
+                    </button>
                     {uniqueBrands.map((brand) => (
                         <button
                             key={brand}
                             className={`filter ${brandFilter === brand ? 'active' : ''}`}
-                            onClick={() => setBrandFilter(brand)}
+                            onClick={() => selectBrand(brand)}
                         >
                             {brand}
                         </button>
-                    ))}             
+                    ))}
                 </div>
                 <div id="listingArea" className="listingArea">
                     {filteredListings.length === 0 ? (
