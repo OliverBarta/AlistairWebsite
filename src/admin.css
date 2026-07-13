@@ -1,3 +1,7 @@
+.bodySectionAdmin {
+    margin: 0px 10px;
+}
+
 h2 {
     margin-top: 10px;
     padding-bottom: 5px;
@@ -5,10 +9,17 @@ h2 {
 }
 
 input, textarea {
+    margin: 5px;
     padding: 10px;
 }
 
 button {
     padding: 5px;
-    margin: 0px 5px;
+    margin: 5px;
+}
+
+.backToSite {
+    position: absolute;
+    top: 2px;
+    right: 5px;
 }
