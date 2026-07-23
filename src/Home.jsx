@@ -12,13 +12,9 @@ function Home() {
     const navigate = useNavigate();
 
     const [AllListings, setAllListings] = useState([]);
-
     const [brandFilter, setBrandFilter] = useState('');
-
     const [uniqueBrands, setUniqueBrands] = useState([]);
-
     const [searchVal, setSearchVal] = useState('');
-
     const [showFilters, setShowFilters] = useState(false);
 
     useEffect(() => {
